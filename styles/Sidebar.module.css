@@ -1,0 +1,141 @@
+.sidebar{
+    flex:1.5;
+    height: calc( 100vh - 50px);
+    padding: 10px;
+    margin-right: 10px;
+}
+.link{
+    color:black;
+}
+.navBarTitle{
+    margin-left: 2px;
+}
+.righttext{
+    border-style: none;
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.icon{
+    display: flex;
+    margin-bottom: 20px;
+    color:crimson;
+    font-weight: 800;
+    padding: 5px;
+    margin-left: -10px;
+
+}
+.iconTitle{
+    margin-left: 10px;
+}
+.righticons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+.chaticons{
+    position: absolute;
+    margin-bottom: 125px;
+    margin-left: 15px;
+    padding: 5px;
+    color:black;
+    border-radius: 50%;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    background-color:crimson;
+}
+.chaticonsmsg{
+    position: absolute;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    padding: 5px;
+    color: black;
+    border-radius: 50%;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    background-color:antiquewhite;
+}
+.chaticonsnote{
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 15px;
+    padding: 5px;
+    color: black;
+    border-radius: 50%;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    background-color:antiquewhite;
+
+}
+/* ::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background-color:#fff;
+}
+::-webkit-scrollbar-thumb {
+    background-color:#fff;
+} */
+.listitems{
+    display: flex;
+    align-items: center;
+    margin:10px 0 10px 10px; 
+    list-style-type: none;
+    padding: 5px;
+}
+.sidebarListText {
+    padding: 10px;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+.sidebarButton {
+    background-color: darkgreen;
+    border-style: none;
+    margin-left: 30px;
+    border-radius: 5px;
+    color: #fff;
+    width:150px;
+    height: 30px;
+    cursor: pointer;
+}
+.sidebarFriendPicture {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin: 10px auto 20px 10px;
+}
+.sidebarPerson {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.navimg{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.username{
+    text-decoration: none;
+    margin-left: 5px;
+
+}
+.sidebarText {
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
