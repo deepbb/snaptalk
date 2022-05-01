@@ -6,6 +6,7 @@ import Header from '../Components/Header'
 import Allposts from '../Components/Allposts'
 import Sidebar from '../Components/Sidebar'
 import Suggestions from '../Components/Suggestions'
+import {URL} from "../url"
 
 export default function Home({posts}) {
   return (
@@ -24,7 +25,7 @@ export default function Home({posts}) {
   )
 }
 export async function  getServerSideProps () {
-  const res = await axios.get("http://localhost:3000/api/Post/posts")
+  const res = await axios.get( URL +"/api/Post/posts")
   console.log(res.data);
   return {
     props: {

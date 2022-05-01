@@ -2,6 +2,7 @@ import styles from "../styles/Suggestions.module.css"
 import Image from "next/image"
 import axios from "axios"
 import { useEffect, useState } from "react"
+import {URL} from "../url"
 
 
 
@@ -10,7 +11,7 @@ export default function Suggestions() {
 
   useEffect(()=> {
     const getUsers = async()=> {
-        const res = await axios.get("http://localhost:3000/api/User/users")
+        const res = await axios.get( URL +"/api/User/users")
         console.log(res.data);
         setUser(res.data)
     }
