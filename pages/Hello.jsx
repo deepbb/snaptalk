@@ -1,4 +1,5 @@
 import axios from "axios"
+import { NEXT_URL } from "../url";
 
 
 export default function Hello({users}){
@@ -8,8 +9,8 @@ export default function Hello({users}){
   )
 }
 
-export async function  getServerSideProps () {
-  const res = await axios.get("http://localhost:3000/api/User")
+export async function getServerSideProps() {
+  const res = await axios.get( NEXT_URL +"/api/User/users")
   console.log(res.data);
   return {
     props: {
