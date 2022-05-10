@@ -1,14 +1,10 @@
 import styles from "../styles/Suggestions.module.css"
 import Image from "next/image"
-import axios from "axios"
-import { useContext } from "react"
-import { AuthContext } from "../Context/AuthContext"
 
 
 
 const Suggestions = ()=> {
 
-  const {username} = useContext(AuthContext)
 
 
 

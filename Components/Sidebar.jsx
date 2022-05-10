@@ -4,14 +4,11 @@ import PersonIcon from '@mui/icons-material/Person';
 import MessageIcon from '@mui/icons-material/Message';
 import ArticleIcon from '@mui/icons-material/Article';
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
-import { useContext } from "react";
-import { UserContext } from "../Context/UserContext";
+
 
 
 const Sidebar = () => {
   
-  const {users} = useContext(UserContext)
-  console.log(users);
   return (
        <div className={styles.sidebar}>
         <div className={styles.leftcontainetr}>
