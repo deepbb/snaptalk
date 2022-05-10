@@ -7,8 +7,10 @@ import Allposts from '../Components/Allposts'
 import Sidebar from '../Components/Sidebar'
 import Suggestions from '../Components/Suggestions'
 import {NEXT_URL} from "../url"
+import Share from '../Components/Share'
 
 export default function Home({posts}) {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -18,6 +20,7 @@ export default function Home({posts}) {
       </Head>
      <div className={styles.homepage}>
      <Sidebar />
+     <Share />
      <Allposts posts={posts} />
      <Suggestions />
      </div>
@@ -25,7 +28,7 @@ export default function Home({posts}) {
   )
 }
 export async function  getServerSideProps () {
-  const res = await axios.get( NEXT_URL +"/api/Post/posts")
+  const res = await axios.get(NEXT_URL + "/api/Post/posts")
   console.log(res.data);
   return {
     props: {

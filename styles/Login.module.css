@@ -1,0 +1,106 @@
+.logincontainer{
+    overflow-x: hidden;
+}
+.login {
+    width: 100vw; 
+    height: 100vh;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loginTitle {
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text{
+    margin-left:50px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    border: 2px solid;
+    border-style: none;
+    height: 300px;
+    width: 350px;
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: white;
+
+}
+.loginInputs {
+    padding: 10px;
+}
+.loginEmail {
+    margin-bottom: 10px;
+    margin-top: 20px;
+    height: 20px;
+    width:80%;
+    margin-left: 25px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 5px;
+    
+}
+.loginEmail:focus {
+    outline: none;
+}
+.loginPassword {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    height: 20px;
+    width:80%;
+    margin-left: 25px;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid gray;
+    
+}
+.loginPassword:focus {
+    outline: none;
+}
+.loginbtncontainer {
+    display: flex;
+    flex-direction: column;
+}
+.loginbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 25px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+    margin-top: 10px;
+    background-color: green;
+    padding: 5px;
+    color: #f0f2f5;
+    cursor: pointer;
+}
+.regbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin-left: 37px;
+    height: 30px;
+    border-radius: 10px;
+    border-style: none;
+    margin-top: 10px;
+    background-color:crimson;
+    padding: 5px;
+    color: #f0f2f5;
+    cursor: pointer;
+}
+.loginInputs {
+    margin-top: 10px;
+}
+.loginForgot {
+    margin-left: 110px;
+    font-size: 12px;
+    margin-top: 10px;
+    color: blue;
+}
