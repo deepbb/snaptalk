@@ -1,16 +1,11 @@
 
-function UserProfile({user}) {
-    console.log(user);
+function UserProfile() {
   
      
   
     return (
       <div>
-      {user ? 
-      <p>{user.username}</p>
-      :<p>no User</p>
-      }
-        
+        Hello user
       </div>
     )
   }

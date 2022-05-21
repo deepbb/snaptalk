@@ -3,10 +3,10 @@ import React, { } from 'react'
 import UserProfile from '../../Components/UserProfile';
 import { NEXT_URL } from '../../url';
 
-export default function Profile({profile}) {
+export default function User({user}) {
 
 
-    console.log(profile);
+    console.log(user);
 
   
 
@@ -20,7 +20,7 @@ export default function Profile({profile}) {
 }
 
 export async function getServerSideProps({params}) {
-    const res = await axios.get(NEXT_URL + `/api/Profile/${params.id}`)
+    const res = await axios.get(NEXT_URL + `/api/User/${params.id}`)
     console.log(res);
     return {
         props: {
