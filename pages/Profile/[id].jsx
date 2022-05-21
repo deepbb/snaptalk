@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, { } from 'react'
-import UserProfile from '../../Components/UserProfile';
 import { NEXT_URL } from '../../url';
 
 export default function Profile({profile}) {
@@ -14,7 +13,6 @@ export default function Profile({profile}) {
 
   return (
     <div>Profileid
-    <UserProfile />
     </div>
   )
 }
