@@ -1,11 +1,26 @@
 
-function UserProfile() {
+function UserProfile({user}) {
+
+  console.log(user);
   
      
   
     return (
       <div>
-        Hello user
+      {user ? 
+      <p>{user.username}</p>
+      :<p>no User</p>
+      }
+  
+      {user&&  
+      <>
+        <p>{user.email}</p>
+        <p>{user.followers.length}</p>
+        </>
+      
+       }
+  
+        
       </div>
     )
   }
