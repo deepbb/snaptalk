@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { } from 'react'
+import React, {useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import UserProfile from "../../Components/UserProfile"
 import { NEXT_URL } from '../../url';
