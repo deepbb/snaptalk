@@ -7,7 +7,6 @@ import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import Image from "next/image"
 import axios from "axios";
-import Profile from "../public/img/Profile.PNG"
 import {NEXT_URL} from "../url"
 
 const Share = () => {
@@ -53,7 +52,7 @@ const Share = () => {
     <div className={styles.imgContainer}>
     {user && user.profilePicture ?
       <Image className={styles.profileimage} src={user.profilePicture} alt="image" width="50" height="50" /> :
-      <Image className={styles.profileimage} src={Profile} alt="No image" width="50" height="50" />
+      <Image className={styles.profileimage} src="/img/profile.png" alt="No image" width="50" height="50" />
       }
       </div>
          <h5 className={styles.user}>{user.username}</h5>
