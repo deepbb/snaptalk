@@ -22,7 +22,7 @@ const Suggestions = ({posts})=> {
     ))}
    
 
-    <Image src="/img/social.PNG" alt="javascript" height="300" width="300" />
+    <Image src="/img/social.png" alt="javascript" height="300" width="300" />
 
     
     </div>

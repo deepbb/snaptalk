@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link";
 import styles from "../styles/UserProfile.module.css"
-import Profile from "../public/img/Profile.PNG"
+import Profile from "../public/img/Profile.png"
 
 function UserProfile({user}) {
   console.log(user);

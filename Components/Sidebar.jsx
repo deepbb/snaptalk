@@ -21,7 +21,7 @@ const Sidebar = () => {
         </div> */}
         <div className={styles.sidebaritems}> 
         <ul className={styles.sidebarlist}>
-          <Image src="/img/connect.PNG" alt="" width="250" height="250" />
+          <Image src="/img/connect.png" alt="" width="250" height="250" />
             
             <li className={styles.listitems}>
             <div className={styles.righticons}>
