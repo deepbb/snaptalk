@@ -1,19 +1,28 @@
 import styles from "../styles/Suggestions.module.css"
 import Image from "next/image"
+import { useState } from "react";
 
 
 
-const Suggestions = ()=> {
+const Suggestions = ({posts})=> {
+
+
+
+ 
+
 
 
 
 
   return (
     <div className={styles.suggestionContainer}>
-    <p>Friends</p>
+    <h3>Friends Posts</h3>
+    {posts && posts.map((post)=> (
+      <li className={styles.listItems} key={post._id}>{post.username}</li>
+    ))}
    
 
-    <Image src="/img/js.png" alt="javascript" height="200" width="150" />
+    <Image src="/img/social.PNG" alt="javascript" height="300" width="300" />
 
     
     </div>

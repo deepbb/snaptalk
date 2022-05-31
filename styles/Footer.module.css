@@ -1,0 +1,9 @@
+.footerContainer{
+    background-color: aliceblue;
+    height: 30px;
+    bottom: 0;
+}
+.footerText{
+    text-align: center;
+    margin-top: 0;
+}

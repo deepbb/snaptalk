@@ -1,6 +1,13 @@
 import { useContext, useState,useRef } from "react";
 import { AuthContext } from "../Context/AuthContext";
+import styles from "../styles/Share.module.css"
+import PermMediaIcon from '@mui/icons-material/PermMedia';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocalOfferIcon from '@mui/icons-material/LocalOffer';
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import Image from "next/image"
 import axios from "axios";
+import Profile from "../public/img/Profile.PNG"
 import {NEXT_URL} from "../url"
 
 const Share = () => {
@@ -8,6 +15,10 @@ const Share = () => {
     const [desc,setDesc] = useState()
     console.log(user);
     const [file,setFile] = useState(null)
+
+    const handleEvent = (event)=> {
+      event.stopPropagation()
+    }
 
     const clickHandler =async (e)=> {
         e.preventDefault()
@@ -19,32 +30,73 @@ const Share = () => {
             console.log(uploadRes.data);
             const { url } = uploadRes.data
             const newPost = {
+                username:user.username,
                 userId:user._id,
                 desc,
                 img: url,
               };
 
-            const res = await axios.post (NEXT_URL + `/api/Post/${user.id}` , newPost)
+            const res = await axios.post (NEXT_URL +`/api/Post/${user.id}` , newPost)
             console.log(res);
+            window.location.replace("/")
  } catch (err) {
      console.log(err);
  }
 
     }
 
+  
+
   return (
-    <div>
-         <form className="shareBottom" onSubmit={clickHandler} >
-                <label htmlFor="file" className="shareOption">
+    <div className={styles.shareContainer}>
+    <div className={styles.profilepic}>
+    <div className={styles.imgContainer}>
+    {user && user.profilePicture ?
+      <Image className={styles.profileimage} src={user.profilePicture} alt="image" width="50" height="50" /> :
+      <Image className={styles.profileimage} src={Profile} alt="No image" width="50" height="50" />
+      }
+      </div>
+         <h5 className={styles.user}>{user.username}</h5>
+        </div>
+         <form className={styles.formElements} onSubmit={clickHandler} >
+               
 
-                 <span className="shareText">photo/video</span>
-                 <input type="file" id="file" accept=".jpeg,.png,.jpg" onChange={(e)=>setFile(e.target.files[0])}/>
-   
+
+
+
+
+                <input className={styles.inputText} type="" onChange={(e)=>setDesc(e.target.value)} placeholder="What are you upto?" />
+
+                
+                <label htmlFor="file" className={styles.imgInput}>
+                <input onClick={handleEvent} type="file" id="file" accept=".jpeg,.png,.jpg" onChange={(e)=>setFile(e.target.files[0])}/>
+
                 </label>
-                <input type="text" onChange={(e)=>setDesc(e.target.value)} />
+                <div>
+                <PermMediaIcon htmlColor="orange" className={styles.shareMedia} />
+                <span className="">photo/video</span>
 
-   
-                <button className="shareButton" type="submit">Share</button> 
+
+
+                <LocalOfferIcon htmlColor="green" className={styles.shareMedia} />
+                <span className="shareText">Tag a Friend</span>
+
+                <LocationOnIcon htmlColor="blue" className={styles.shareMedia} />
+                <span className="shareText">Location</span>
+
+
+
+                <EmojiEmotionsIcon htmlColor="red" className={styles.shareMedia} />
+                <span className="shareText">Feelings</span>
+
+                </div>
+
+
+
+                {file ?  
+                <button className={styles.shareBtn} type="submit">Share</button>  : 
+                <button style={{cursor:"not-allowed"}} className={styles.shareBtn} type="submit">Share</button> }
+                
 
             </form>
     </div>

@@ -17,7 +17,7 @@ export default function Profile({profile}) {
 
     useEffect(()=>{
       const getUser = async ()=> {
-        const res = await axios.get(NEXT_URL + `/api/User/${id}`)
+        const res = await axios.get(NEXT_URL +`/api/User/${id}`)
         setuser(res.data)
         console.log(res);
       }
@@ -38,7 +38,7 @@ export default function Profile({profile}) {
 }
 
 export async function getServerSideProps({params}) {
-    const res = await axios.get(NEXT_URL + `/api/Profile/${params.id}`)
+    const res = await axios.get(NEXT_URL +`/api/Profile/${params.id}`)
     console.log(res);
     return {
         props: {

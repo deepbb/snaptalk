@@ -1,0 +1,36 @@
+.headerComponent{
+    background-color: green;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.head{
+    margin-left: 10px;
+    color: cornsilk;
+}
+.user{
+    color:white;
+    margin-left: 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.login{
+    margin-right: 20px;
+}
+.logBtn{
+    border-style: none;
+    background-color: crimson;
+    color: white;
+    height:25px;
+    width: 70px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.logLink{
+    text-decoration: none;
+    color: white;
+}

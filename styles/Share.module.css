@@ -1,0 +1,59 @@
+.shareContainer{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 250px;
+    margin-left: 20%;
+    border-radius: 5px;
+    box-shadow: 3px 4px 13px 4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 3px 4px 13px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 4px 13px 4px rgba(0,0,0,0.75);
+
+}
+.formElements{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.inputText{
+    width: 90%;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.profilepic{
+    display: flex;
+    width: 200px;
+    height: 50px;
+}
+.imgInput{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 20%;
+}
+.imgContainer{
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.profileimage{
+    border-radius: 50%;
+}
+.user{
+    margin-left: 10px;
+}
+.shareMedia{
+    margin-left: 20px;
+    align-items: center;
+   justify-content: space-between;
+}
+.shareBtn{
+    width: 20%;
+    height: 30px;
+    margin-top: 20px;
+    align-self: center;
+    background-color: green;
+    border-style: none;
+    border-radius: 10px;
+    color:white;
+    cursor: pointer;
+}
