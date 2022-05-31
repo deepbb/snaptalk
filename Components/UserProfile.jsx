@@ -13,7 +13,7 @@ function UserProfile({user}) {
     <div className={styles.profile}>
     {user && user.profilePicture ?
       <Image className={styles.profileimage} src={user.profilePicture} alt="image" width="200" height="200" /> :
-      <Image className={styles.profileimage} src="/img/Profile.png" alt="No image" width="200" height="200" />
+      <Image className={styles.profileimage} src="/img/profile.png" alt="No image" width="200" height="200" />
       }
       {user ? 
     <h1 className={styles.name}>{user.username}</h1>
